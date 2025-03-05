@@ -1,2 +1,2 @@
-# freeRTOS
-freeRTOS学习
+# FreeRTOS
+study for FreeRTOS
