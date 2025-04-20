@@ -3,7 +3,7 @@
 - 将下载的FreeRTOS源码Source路径下的所有.c文件和include,portable文件夹copy到FreeRTOS文件夹下，如图所示：
 ![103-2](https://github.com/user-attachments/assets/a78e0bcc-794e-444b-970b-32d161f10e26)
 ![103-3](https://github.com/user-attachments/assets/74da5ced-9d25-48a4-b431-b56aff63f1d5)
-- 删除除Keil,MemMang,RVDS以外的所有文件夹，如图所示：
+- 删除portable文件夹下除Keil,MemMang,RVDS以外的所有文件夹，如图所示：
 ![103-4](https://github.com/user-attachments/assets/fe225611-348d-4e70-aba6-fbb7a49286df)
 - 新建两个工程分组，并添加相应文件，如图所示：
 ![103-5](https://github.com/user-attachments/assets/f1c9fbca-9765-4a49-88de-5295a36d2523)
