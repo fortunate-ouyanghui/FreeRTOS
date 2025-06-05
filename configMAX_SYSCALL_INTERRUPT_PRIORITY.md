@@ -7,6 +7,8 @@
 - taskDISABLE_INTERRUPTS()屏蔽部分中断 taskENABLE_INTERRUPTS()使taskDISABLE_INTERRUPTS失效
 - taskENTER_CRITICAL()不允许发生任务切换同时屏蔽优先级低于configMAX_SYSCALL_INTERRUPT_PRIORITY的中断 taskEXIT_CRITICAL()允许发生任务切换
 - 中断优先级数值越小越优先，任务优先级数值越大越优先
+- 如图所示
+![ISR](https://github.com/user-attachments/assets/f5af3020-a91e-4bb4-b068-4e487b663c52)
 ## 实验目的
 本实验会使用两个定时器，一个优先级为4，一个优先级为6，注意：系统所管理的优先级范围为5-15
 实验现象：两个定时器每1s，打印一段字符串，当关中断时，停止打印，开中断时持续打印。
