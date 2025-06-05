@@ -5,7 +5,7 @@
 - 任何优先级的ISR函数都可以打断任务的执行
 - 任务切换发生在Pendable request for system service中断的服务函数里
 - taskDISABLE_INTERRUPTS()屏蔽部分中断 taskENABLE_INTERRUPTS()使taskDISABLE_INTERRUPTS失效
-- taskENTER_CRITICAL()不允许发生任务切换 taskEXIT_CRITICAL()允许发生任务切换
+- taskENTER_CRITICAL()不允许发生任务切换同时屏蔽优先级低于configMAX_SYSCALL_INTERRUPT_PRIORITY的中断 taskEXIT_CRITICAL()允许发生任务切换
 - 中断优先级数值越小越优先，任务优先级数值越大越优先
 ## 实验目的
 本实验会使用两个定时器，一个优先级为4，一个优先级为6，注意：系统所管理的优先级范围为5-15
