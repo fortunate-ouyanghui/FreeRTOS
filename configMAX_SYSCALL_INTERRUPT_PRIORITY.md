@@ -2,6 +2,7 @@
 ## 注意事项：
 - 低于configMAX_SYSCALL_INTERRUPT_PRIORITY优先级的中断是freertos可屏蔽中断，高于configMAX_SYSCALL_INTERRUPT_PRIORITY优先级的中断是FreeRTOS不可屏蔽中断
 - 在可屏蔽中断的ISR函数中可以调用FreeRTOS中断级别的API，绝不能调用FreeRTOS普通级别的API；在不可屏蔽中断的ISR函数 里，不能调用任何的FreeRTOS API函数
+- 任何优先级的ISR函数都可以打断任务的执行
 - 任务切换发生在Pendable request for system service中断的服务函数里
 - taskDISABLE_INTERRUPTS()屏蔽部分中断 taskENABLE_INTERRUPTS()使taskDISABLE_INTERRUPTS失效
 - taskENTER_CRITICAL()不允许发生任务切换 taskEXIT_CRITICAL()允许发生任务切换
