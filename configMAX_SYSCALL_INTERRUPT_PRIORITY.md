@@ -1,6 +1,6 @@
 # 中断管理实验
 ## 注意事项：
-- 低于configMAX_SYSCALL_INTERRUPT_PRIORITY优先级的中断里才允许调用FreeRTOS的API函数
+- 低于configMAX_SYSCALL_INTERRUPT_PRIORITY优先级的中断是freertos可屏蔽中断，高于configMAX_SYSCALL_INTERRUPT_PRIORITY优先级的中断是FreeRTOS不可屏蔽中断
 - 任务切换发生在Pendable request for system service中断的服务函数里
 - taskDISABLE_INTERRUPTS()屏蔽部分中断 taskENABLE_INTERRUPTS()使taskDISABLE_INTERRUPTS失效
 - taskENTER_CRITICAL()不允许发生任务切换 taskEXIT_CRITICAL()允许发生任务切换
